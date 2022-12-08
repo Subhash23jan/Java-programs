@@ -1,0 +1,50 @@
+abstract class Shape
+{
+    double l,b;
+   abstract double getArea();
+}
+class Rectangle extends Shape
+{
+    Rectangle(double a,double c)
+    {
+        this.l=a;
+        this.b=c;
+    }
+    double getArea()
+    {
+        return l*b;
+    }
+}
+class triangle extends Shape
+{
+    triangle(double a,double c)
+    {
+        this.l=a;
+        this.b=c;
+    }
+    double getArea()
+    {
+        return 0.5*l*b;
+    }
+}
+class circle extends Shape
+{
+    circle(double a)
+    {
+        this.l=a;
+    }
+    double getArea()
+    {
+        return (3.14)*l*l;
+    }
+}
+class sample {
+    public static void main(String[] args) {
+        Rectangle r=new Rectangle(10,6);
+        triangle t=new triangle(3,9);
+        circle c= new circle(24);
+        System.out.println("Rectangle area is "+r.getArea());
+        System.out.println("triangle area is "+t.getArea());
+        System.out.println("circle area is "+c.getArea());
+    }
+}
